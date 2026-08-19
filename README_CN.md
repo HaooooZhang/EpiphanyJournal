@@ -7,10 +7,10 @@
 > 如果你不希望保留原版的信息提示，请在 Epiphany 的配置文件中关闭对应选项。
 
 ## 相关链接
-- [Github]
-- [CurseForge]
-- [Modrinth]
+- [Github](https://github.com/HaooooZhang/EpiphanyJournal)
+- [CurseForge](https://www.curseforge.com/minecraft/mc-mods/epiphany-journal)
+- [Modrinth](https://modrinth.com/mod/epiphany-journal)
 - [MCMOD]
-- [红石中继站 / MCZWLT]
-- [MCBBS 纪念版]
-- [Discord]
+- [红石中继站 / MCZWLT](https://www.mczwlt.net/resource/zcdhn3l6)
+- [MCBBS 纪念版](https://www.mcbbs.co/thread-6011-1-1.html)
+- [Discord](https://discord.gg/xSEWpdae9C)
