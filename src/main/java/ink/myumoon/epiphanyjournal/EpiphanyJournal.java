@@ -1,8 +1,6 @@
 package ink.myumoon.epiphanyjournal;
 
 import com.mojang.logging.LogUtils;
-import ink.myumoon.epiphanyjournal.client.EpiphanyNotificationClient;
-import ink.myumoon.epiphanyjournal.network.EpiphanyNetwork;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -16,7 +14,5 @@ public final class EpiphanyJournal {
 
     public EpiphanyJournal(IEventBus modEventBus, ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-        EpiphanyNetwork.register(modEventBus, (payload, context) ->
-                context.enqueueWork(() -> EpiphanyNotificationClient.handle(payload)));
     }
 }

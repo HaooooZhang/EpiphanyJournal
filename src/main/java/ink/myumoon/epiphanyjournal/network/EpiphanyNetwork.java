@@ -1,23 +1,22 @@
 package ink.myumoon.epiphanyjournal.network;
 
-import net.neoforged.bus.api.IEventBus;
+import ink.myumoon.epiphanyjournal.EpiphanyJournal;
+import ink.myumoon.epiphanyjournal.client.EpiphanyNotificationClient;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.network.handling.IPayloadHandler;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
+@EventBusSubscriber(modid = EpiphanyJournal.MODID)
 public final class EpiphanyNetwork {
-    private EpiphanyNetwork() {
-    }
+    private static final String NETWORK_VERSION = "1";
 
-    public static void register(IEventBus modEventBus, IPayloadHandler<EpiphanyNotificationPayload> handler) {
-        modEventBus.addListener(RegisterPayloadHandlersEvent.class,
-                event -> registerPayloads(event, handler));
-    }
-
-    private static void registerPayloads(RegisterPayloadHandlersEvent event,
-                                         IPayloadHandler<EpiphanyNotificationPayload> handler) {
-        event.registrar("1").playToClient(
+    @SubscribeEvent
+    public static void registerPayloads(RegisterPayloadHandlersEvent event) {
+        PayloadRegistrar registrar = event.registrar(NETWORK_VERSION);
+        registrar.playToClient(
                 EpiphanyNotificationPayload.TYPE,
                 EpiphanyNotificationPayload.STREAM_CODEC,
-                handler);
+                EpiphanyNotificationClient::handle);
     }
 }
