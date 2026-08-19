@@ -1,0 +1,6 @@
+{
+  "epiphany_journal.configuration.enableLootJournalNotifications": "启用 Loot Journal 通知",
+  "epiphany_journal.insight_points": "心得点",
+  "epiphany_journal.module_unlocked": "模块 [%s] 已解锁",
+  "epiphany_journal.epiphany_unlocked": "顿悟 [%s] 已解锁"
+}

@@ -1,0 +1,6 @@
+{
+  "epiphany_journal.configuration.enableLootJournalNotifications": "Enable Loot Journal Notifications",
+  "epiphany_journal.insight_points": "Insight Points",
+  "epiphany_journal.module_unlocked": "Module [%s] Unlocked",
+  "epiphany_journal.epiphany_unlocked": "Epiphany [%s] Unlocked"
+}
