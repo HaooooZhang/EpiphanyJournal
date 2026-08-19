@@ -25,8 +25,7 @@ public final class EpiphanyNotificationListener {
 
     @SubscribeEvent
     static void onInsightPointsChanged(InsightPointsChangedEvent event) {
-        if (!Config.ENABLE_LOOT_JOURNAL_NOTIFICATIONS.get()
-                || !ink.myumoon.epiphany.Config.NOTIFY_INSIGHT_POINTS.get() || !event.isGain()) {
+        if (!Config.ENABLE_LOOT_JOURNAL_NOTIFICATIONS.get() || !event.isGain()) {
             return;
         }
         Component message = Component.translatable("epiphany_journal.insight_points")
@@ -37,8 +36,7 @@ public final class EpiphanyNotificationListener {
 
     @SubscribeEvent
     static void onModuleUnlocked(ModuleUnlockedEvent event) {
-        if (!Config.ENABLE_LOOT_JOURNAL_NOTIFICATIONS.get()
-                || event.isSilent() || !ink.myumoon.epiphany.Config.NOTIFY_MODULE_UNLOCK.get()) {
+        if (!Config.ENABLE_LOOT_JOURNAL_NOTIFICATIONS.get() || event.isSilent()) {
             return;
         }
         ServerPlayer player = event.getPlayer();
@@ -55,8 +53,7 @@ public final class EpiphanyNotificationListener {
 
     @SubscribeEvent
     static void onEpiphanyUnlocked(EpiphanyUnlockedEvent event) {
-        if (!Config.ENABLE_LOOT_JOURNAL_NOTIFICATIONS.get()
-                || event.isSilent() || !ink.myumoon.epiphany.Config.NOTIFY_EPIPHANY_UNLOCK.get()) {
+        if (!Config.ENABLE_LOOT_JOURNAL_NOTIFICATIONS.get() || event.isSilent()) {
             return;
         }
         ServerPlayer player = event.getPlayer();

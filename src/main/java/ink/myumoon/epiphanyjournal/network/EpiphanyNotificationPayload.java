@@ -1,6 +1,7 @@
 package ink.myumoon.epiphanyjournal.network;
 
 import ink.myumoon.epiphanyjournal.EpiphanyJournal;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.network.codec.ByteBufCodecs;
@@ -18,7 +19,7 @@ public record EpiphanyNotificationPayload(
     public static final Type<EpiphanyNotificationPayload> TYPE = new Type<>(
             ResourceLocation.fromNamespaceAndPath(EpiphanyJournal.MODID, "epiphany_notification"));
 
-    public static final StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, EpiphanyNotificationPayload> STREAM_CODEC =
+    public static final StreamCodec<RegistryFriendlyByteBuf, EpiphanyNotificationPayload> STREAM_CODEC =
             StreamCodec.composite(
                     ComponentSerialization.STREAM_CODEC,
                     EpiphanyNotificationPayload::message,
