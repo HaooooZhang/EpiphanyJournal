@@ -10,7 +10,7 @@ English | [简体中文](README_CN.md)
 - [Github](https://github.com/HaooooZhang/EpiphanyJournal)
 - [CurseForge](https://www.curseforge.com/minecraft/mc-mods/epiphany-journal)
 - [Modrinth](https://modrinth.com/mod/epiphany-journal)
-- MCMOD
+- [MCMOD](https://www.mcmod.cn/class/29997.html)
 - [MCZWLT](https://www.mczwlt.net/resource/zcdhn3l6)
 - [MCBBS Memorial Edition](https://www.mcbbs.co/thread-6011-1-1.html)
 - [Discord](https://discord.gg/xSEWpdae9C)
